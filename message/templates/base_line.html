@@ -1,0 +1,28 @@
+<!--共通のサイトテンプレート-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <meta property="og:image"
+content="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+</head>
+  <body>
+    {% include "_navbar.html" %} <!--ナビバーテンプレート-->
+
+    {% block title %}<!--タイトルテンプレート-->
+    {% endblock %}
+
+    {% include "_sidebar.html" %}<!--サイドバーテンプレート-->
+
+    {% block main %}
+    {% endblock %}
+
+    {% include "_sns.html" %}<!--snsテンプレート-->
+
+    {% include "_footer.html" %}<!--フッターテンプレート-->
+  </body>
+</html>

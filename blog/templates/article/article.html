@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Article
+{% endblock %}
+{% block main%}
+	<main id="content" role="main"></main>
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="three-quarters-block">
+					<div class="content">
+						<article class="post hentry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+							<header class="entry-header">
+								<h2 class="entry-title" itemprop="headline">{{ create.title }}</h2>
+								<div class="entry-meta">
+									<span class="post-date">
+										<i class="fa fa-clock-o fa-fw"></i> <span class="updated">{{ create.create_time }}</span>
+									</span> <!-- .post-date -->
+									<span class="post-author">
+										<i class="fa fa-user fa-fw"></i> Written by <span class="vcard"><a class="fn url"
+												href="author.html">{{ create.author }}</a></span>
+									</span> <!-- .post-author -->
+									<span class="post-categories">
+										<i class="fa fa-folder fa-fw"></i> <a href="blog.html" rel="tag">Category {{ create.category }}</a>
+									</span> <!-- .post-categories -->
+									<span class="post-tags">
+										<i class="fa fa-tags fa-fw"></i> <a href="blog.html" rel="tag">Tag A</a>, <a href="blog.html"
+											rel="tag">Tag B</a>, <a href="blog.html" rel="tag">Tag C</a>
+									</span> <!-- .post-tags -->
+								</div> <!-- .entry-meta -->
+							</header> <!-- .entry-header -->
+							<div class="entry-image">
+								<img src="http://dummyimage.com/800x250/f3f3f3/d1d1d1.jpg&text=Featured+Image" alt="Blog Post"
+									itemprop="image">
+							</div> <!-- .entry-image -->
+							<div class="entry-content" itemprop="articleBody">
+								<p>{{ create.content }} </p>
+							</div> <!-- .entry-content -->
+						</article> <!-- .post -->
+					</div> <!-- .content -->
+				</div> <!-- .three-quarters-block -->
+				{% include 'base/_sidebar.html' %}
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	</div> <!-- .section -->
+	</main> <!-- #content -->
+{% endblock %}

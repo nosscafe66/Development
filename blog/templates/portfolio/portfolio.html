@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+	{% load static %}
+		{% block title %}
+		PORTFOLIO
+		{% endblock %}
+	{% block main%}
+	<main id="content" role="main">
+		<div class="section">
+			<div class="container">
+				<nav id="isotope-menu"> 
+					<ul class="horizontal-navigation"> 
+						<li class="active"><a href="#" data-filter="*">All</a></li> 
+						<li><a href="#" data-filter=".web">Web Design</a></li>  
+						<li><a href="#" data-filter=".logo">Logo</a></li> 
+						<li><a href="#" data-filter=".video">Video</a></li> 
+						<li><a href="#" data-filter=".print">Print</a></li> 
+					</ul> 
+				</nav> <!-- #isotope-menu -->
+				<div id="isotope-content" class="content">
+{% include 'portfolio/_item.html' %}
+				</div> <!-- #isotope-content -->
+			</div> <!-- .container -->
+		</div> <!-- .section -->
+	</main> <!-- #content -->
+{% endblock %}

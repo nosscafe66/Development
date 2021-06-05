@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+	{% load static %}
+		{% block title %}
+		BLOG
+		{% endblock %}
+{% block main %}
+<main id="content" role="main">
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="three-quarters-block">
+					<div class="content">
+						{% for create in object_list|slice:":3" %}
+						<article class="post summary hentry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+							<header class="entry-header">
+								<h2 class="entry-title" itemprop="headline"><a href="article.html" title="Article Title" rel="bookmark"
+										itemprop="url">{{ create.title }}</a></h2>
+								<div class="entry-meta">
+									<span class="post-date">
+										<i class="fa fa-clock-o fa-fw"></i> <span class="updated">{{ create.create_time }}</span>
+									</span> <!-- .post-date -->
+									<span class="post-author">
+										<i class="fa fa-user fa-fw"></i> Written by <span class="vcard"><a class="fn url"
+												href="author.html">{{ create.author }}</a></span>
+									</span> <!-- .post-author -->
+									<span class="post-categories">
+										<i class="fa fa-folder fa-fw"></i> <a href="{% url 'blog' %}" rel="tag">Category {{ create.category }}</a>
+										<!-- <a href="blog.html" rel="tag">Category B</a> -->
+									</span> <!-- .post-categories -->
+									<span class="post-tags">
+										<i class="fa fa-tags fa-fw"></i> <a href="blog.html" rel="tag">Tag A</a>, <a href="blog.html"
+											rel="tag">Tag
+											B</a>, <a href="blog.html" rel="tag">Tag C</a>
+									</span> <!-- .post-tags -->
+								</div> <!-- .entry-meta -->
+							</header> <!-- .entry-header -->
+							<div class="entry-thumbnail">
+								<a href="article.html" title="Blog Post">
+									<img src="http://dummyimage.com/150x150/f3f3f3/d1d1d1.jpg&text=Thumbnail" alt="Blog Post"
+										itemprop="image">
+								</a>
+							</div> <!-- .entry-thumbnail -->
+							<div class="entry-summary" itemprop="articleBody">
+								<p>{{ create.content }}</p>
+								<a class="more button" href="{% url 'article' create.pk %}">Read More</a>
+							</div> <!-- .entry-summary -->
+						</article> <!-- .post.summary -->
+						{% endfor %}
+						<!--article-->
+						<div class="pagination">
+							<a class="prev button" href="{% url 'blog' %}"><i class="fa fa-chevron-left"></i> Previous Page</a>
+							<a class="next button" href="{% url 'blog' %}">Next Page <i class="fa fa-chevron-right"></i></a> <!--前後のページ戻れるようにする。-->
+						</div> <!-- .pagination -->
+					</div> <!-- .content -->
+				</div> <!-- .three-quarters-block -->
+				{% include 'base/_sidebar.html' %}
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+	</div> <!-- .section -->
+</main> <!-- #content -->
+{% endblock %}

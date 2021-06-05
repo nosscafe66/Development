@@ -1,0 +1,14 @@
+{% for webdesigns in webdesignarts|slice:":2" %}
+{% if webdesigns.image %}
+<div class="isotope-item web" itemscope itemtype="http://schema.org/CreativeWork">
+  <a href="{{ webdesigns.image.url }}" title="Project" rel="bookmark" itemprop="url">
+    <img src="{{ webdesigns.image.large.url }}" alt="View Project" itemprop="image">
+    <div class="overlay">
+      <span class="title" itemprop="name">{{ webdesigns.project_name }}</span>
+    </div> <!-- .overlay -->
+  </a>
+</div> <!-- .isotope-item -->
+{% endif %}
+{% empty %}
+<p>Error</p>
+{% endfor %}

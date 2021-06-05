@@ -1,0 +1,14 @@
+{% for myarts in myarts|slice:":4" %}
+{% if myarts.image %}
+<div class="isotope-item print" itemscope itemtype="http://schema.org/CreativeWork">
+  <a href="{{ myarts.image.url }}" title="Project" rel="bookmark" itemprop="url">
+    <img src="{{ myarts.image.thumbnail.url }}" alt="View Project" itemprop="image">
+    <div class="overlay">
+      <span class="title" itemprop="name">{{ myarts.project_name }}</span>
+    </div> <!-- .overlay -->
+  </a>
+</div> <!-- .isotope-item ❸ -->
+{% endif %}
+{% empty %}
+{% include 'portfolio/empty.html' %}
+{% endfor %}

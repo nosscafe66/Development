@@ -1,0 +1,166 @@
+<mxfile>
+    <diagram id="PkuyETDk7Zrk3zIUlEJ1" name="CRUD処理画面設計">
+        <mxGraphModel dx="3287" dy="1232" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="37" value="&lt;span style=&quot;font-size: 24px&quot;&gt;404:Page Not Fount&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="40" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="510" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="-360" y="40" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" parent="1" vertex="1">
+                    <mxGeometry x="-355" y="510" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="HOME" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="-350" y="10" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="About画面" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="-355" y="480" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="404画面" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="10" width="60" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Service画面" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="480" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;span&gt;ナビバー(ヘッダー)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-360" y="40" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;span&gt;フッター&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-360" y="400" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;span&gt;サイドコンテンツ&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-360" y="130" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="ナビバー(ヘッダー)" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-355" y="510" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="フッター" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-355" y="870" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="サイドコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-355" y="600" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;span&gt;ナビバー(ヘッダー)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="510" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span&gt;フッター&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="870" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;span&gt;サイドコンテンツ&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="600" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-255" y="600" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-255" y="750" width="450" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-240" y="760" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="600" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="750" width="450" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="1050" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="-355" y="1050" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Article" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="-345" y="1020" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="BLOG" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="1020" width="50" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="ナビバー(ヘッダー)" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-355" y="1050" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="フッター" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-355" y="1410" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="サイドコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-355" y="1140" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;span&gt;ナビバー(ヘッダー)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="1050" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;span&gt;フッター&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="1410" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;span&gt;サイドコンテンツ&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="1140" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-255" y="1140" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-255" y="1290" width="450" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-240" y="1300" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="1140" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="1290" width="450" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="-990" y="1050" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="" style="whiteSpace=wrap;html=1;aspect=fixed;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="-1570" y="1050" width="560" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="About画面" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="-1570" y="1020" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="ArticleDetail" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=1;" vertex="1" parent="1">
+                    <mxGeometry x="-990" y="1020" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="ナビバー(ヘッダー)" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1570" y="1050" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="フッター" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1570" y="1410" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="サイドコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1570" y="1140" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;span&gt;ナビバー(ヘッダー)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-990" y="1050" width="560" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="&lt;span&gt;フッター&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-990" y="1410" width="560" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;span&gt;サイドコンテンツ&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-990" y="1140" width="90" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1470" y="1140" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1470" y="1290" width="450" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-1455" y="1300" width="100" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="メインコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-885" y="1140" width="450" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="snsコンテンツ" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fillColor=#1A1A1A;" vertex="1" parent="1">
+                    <mxGeometry x="-885" y="1290" width="450" height="110" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

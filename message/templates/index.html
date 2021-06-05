@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+  {% block title %}
+    <title>Top</title>
+  {% endblock %}
+    {% block main%}
+      {% include "_maincontents.html" %}<!--メインコンテンツテンプレート-->
+      {% if username == "yuto" %}
+          <h2>Hello {{username}}</h2>
+      {% elif username %}
+          <h2>Welcome {{username}}</h2>
+      {% else %}
+          {% include "404.html" %}
+          <h2>{{user}}こんにちは</h2>
+      {% endif %}
+    {% endblock %}

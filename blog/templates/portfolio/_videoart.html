@@ -1,0 +1,14 @@
+{% for videoarts in videoarts|slice:":2" %}
+{% if videoarts.image %}
+<div class="isotope-item video" itemscope itemtype="http://schema.org/CreativeWork">
+  <a href="{{ videoarts.image.url }}" title="Project" rel="bookmark" itemprop="url">
+    <img src="{{ videoarts.image.thumbnail.url }}" alt="View Project" itemprop="image">
+    <div class="overlay">
+      <span class="title" itemprop="name">{{ videoarts.video_name }}</span>
+    </div> <!-- .overlay -->
+  </a>
+</div> <!-- .isotope-item ❹-->
+{% endif %}
+{% empty %}
+{% include 'portfolio/empty.html' %}
+{% endfor %}

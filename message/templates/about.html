@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+  {% block title %}
+    <title>about</title>
+  {% endblock %}
+    {% block main %}
+    <h1>Introduce</h1>
+    <h2>SkillSet</h2>
+    <p>これまでに{{ num_services }}個のサービスを作りました。</p>
+    <ul>
+        {% for skill in Skills %}
+        <li>{{ skill }}</li>
+        {% empty %}
+        スキルがありません。
+        {% endfor %}
+    </ul>
+    {% endblock %}  

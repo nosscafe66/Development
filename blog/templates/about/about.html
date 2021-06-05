@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+	{% load static %}
+		{% block title %}
+		ABOUT
+		{% endblock %}
+{% block main %}
+	<main id="content" role="main">
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="half-block">
+						<div class="content">
+							<article class="post hentry" itemscope itemprop itemtype="http://schema.org/Article">
+								<div class="entry-image">
+									<img src="{% static 'blog/myart.jpg' %}" alt="About" itemprop="image">
+								</div> <!-- .entry-image -->
+								<div class="entry-content" itemprop="articleBody">
+									{% for skill in skills %}
+									<li>{{ skill }}</li>
+									<p>{{ username }}</p>
+									{% endfor %}
+								</div> <!-- .entry-content -->
+							</article> <!-- .post -->
+						</div> <!-- .content -->
+					</div> <!-- .half-block -->
+					<div class="half-block" role="complementary">
+						<p>{{ username }}</p>
+					</div> <!-- .half-block -->
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</div> <!-- .section -->
+	</main> <!-- #content -->
+{% endblock %}

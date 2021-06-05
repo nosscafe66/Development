@@ -1,0 +1,104 @@
+<!--共通のサイトテンプレート-->
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <title>
+    {% block title %}
+    {% endblock %}
+  </title>
+  <link media="all" type="text/css"
+    href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link media="all" type="text/css" href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+  <link media="all" type="text/css" href="{% static 'css/core.css' %}" rel="stylesheet">
+  <link media="all" type="text/css" href="{% static 'css/skins/black.css' %}" rel="stylesheet">
+  <link media="all" type="text/css" href="{% static 'css/custom.css' %}" rel="stylesheet">
+</head>
+<body class="home" itemscope itemtype="http://schema.org/WebPage">
+  <div id="masthead">
+    <div id="site-header" role="banner">
+      <div class="container">
+        <div class="row">
+          <div id="branding">
+            <a class="logo" href="{% url 'home' %}">Canvas</a>
+          </div> <!-- #branding -->
+{% include 'base/_navbar.html' %}
+        </div> <!-- .row -->
+      </div> <!-- .container -->
+    </div> <!-- #site-header -->
+{% include 'base/_page_title.html' %}
+  </div> <!-- #masthead -->
+{% block main %}<!--メインのテンプレート差し込み部分-->
+{% endblock %}
+  <div id="prefooter" role="complementary">
+    <div class="container">
+      <div class="row">
+        <div class="one-third-block">
+{% include "base/_contact.html" %}
+        </div> <!-- .one-third-block -->
+        <div class="one-third-block">
+{% include "base/_recent.html" %}
+        </div> <!-- .one-third-block -->
+        <div class="one-third-block">
+          <div class="connect-widget widget">
+{% include "base/_mail.html" %}
+{% include "base/_sns.html" %}
+          </div> <!-- .connect-widget -->
+        </div> <!-- .one-third-block -->
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #prefooter -->
+{% include "base/_footer.html" %}
+
+  <script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+  {% if request.path == '/blog/contact/' %}
+  <!-- MapScripts -->
+  
+  <script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  <script type="text/javascript"
+    src="http://maps.googleapis.com/"></script>
+  <script type="text/javascript" src="{% static 'js/map.js' %}"></script>
+
+  {% elif request.path == '/blog/portfolio/' %}
+  <!-- PortfolioScripts -->
+  <script type="text/javascript" src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+  <script type="text/javascript">
+    // Isotope Filtering
+    $(window).load(function () {
+
+      var $container = $('#isotope-content');
+      $container.isotope({
+        filter: '*',
+        itemSelector: '.isotope-item',
+        layoutMode: 'masonry',
+        // layout mode options
+        masonry: {
+          columnWidth: 270
+        }
+      });
+
+      $('#isotope-menu a').click(function () {
+        $('#isotope-menu li.active').removeClass('active');
+        $(this).parent().addClass('active');
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+          filter: selector,
+        });
+        return false;
+      });
+
+    });
+  </script>
+  {% endif %}
+</body>
+</html>

@@ -1,0 +1,90 @@
+{% if request.path == '/blog/' %}
+  <div class="recent-posts-widget widget">
+    <h4 class="widget-title">Recent Posts</h4>
+    <ul>
+      {% for create in object_list|slice:":3" %}
+      <li class="recent-post">
+        <a href="{% url 'article' create.pk %}" title="Lorem ipsum dolar" rel="bookmark">
+          <span class="recent-post-title">
+            {{ create.home_title }}
+          </span>
+          <span class="recent-post-thumbnail">
+            <img src="http://dummyimage.com/80x80/f3f3f3/999999.jpg&text=Thumbnail" alt="Thumbnail">
+          </span>
+          <span class="recent-post-summary">
+            <p>{{ create.home_content }}</p>
+          </span>
+        </a>
+      </li> <!-- .recent-post -->
+      
+      {% endfor %}
+    </ul>
+  </div> <!-- .recent-posts-widget -->
+
+{% elif request.path != '/blog/' %}
+  <div class="recent-posts-widget widget">
+    <h4 class="widget-title">Recent Posts</h4>
+    <ul>
+      {% for create in object_list|slice:":3" %}
+      <li class="recent-post">
+        <a href="{% url 'article' create.pk %}" title="Lorem ipsum dolar" rel="bookmark">
+          <span class="recent-post-title">
+            {{ create.title }}
+          </span>
+          <span class="recent-post-thumbnail">
+            <img src="http://dummyimage.com/80x80/f3f3f3/999999.jpg&text=Thumbnail" alt="Thumbnail">
+          </span>
+          <span class="recent-post-summary">
+            <p>{{ create.content }}</p>
+          </span>
+        </a>
+      </li> <!-- .recent-post -->
+      {% endfor %}
+    </ul>
+  </div> <!-- .recent-posts-widget -->
+
+{% elif requeset.path == '/blog/contact/' %}
+<div class="recent-posts-widget widget">
+  <h4 class="widget-title">Recent Posts {{request.path}}</h4>
+  <ul>
+    {% for create in object_list|slice:":3" %}
+    <li class="recent-post">
+      <a href="{% url 'article' create.pk %}" title="Lorem ipsum dolar" rel="bookmark">
+        <span class="recent-post-title">
+          {{ create.title }}
+        </span>
+        <span class="recent-post-thumbnail">
+          <img src="http://dummyimage.com/80x80/f3f3f3/999999.jpg&text=Thumbnail" alt="Thumbnail">
+        </span>
+        <span class="recent-post-summary">
+          <p>{{ create.content }}</p>
+        </span>
+      </a>
+    </li> <!-- .recent-post -->
+    {% endfor %}
+  </ul>
+</div> <!-- .recent-posts-widget -->
+
+{% elif requeset.path == 'blog/portfolio/' %} <!--ポートフォリオ用の最近の投稿のタイトルと概要をつける-->
+<div class="recent-posts-widget widget">
+  <h4 class="widget-title">Recent Posts</h4>
+  <ul>
+    {% for portfolio in object_list|slice:":3" %}
+    <li class="recent-post">
+      <a href="{% url 'article' create.pk %}" title="Lorem ipsum dolar" rel="bookmark">
+        <span class="recent-post-title">
+          {{ portfolio.project_name }}
+        </span>
+        <span class="recent-post-thumbnail">
+          <img src="http://dummyimage.com/80x80/f3f3f3/999999.jpg&text=Thumbnail" alt="Thumbnail">
+        </span>
+        <span class="recent-post-summary">
+          <p>{{ portfolio.content }}</p>
+        </span>
+      </a>
+    </li> <!-- .recent-post -->
+    {% endfor %}
+  </ul>
+</div> <!-- .recent-posts-widget -->
+
+{% endif %}
